@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Economic Justice Forum (EJF) — Justice, Equity & Prosperity</title>
+  <link rel="stylesheet" href="ejf_styles.css">
+  <!-- Add this for AI functionality -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <img src="logo.jpeg" alt="EJF logo" style="height:54px; width:auto; object-fit:contain; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1)"/>
+      <div style="color:white;">
+        <div style="font-weight:700">Economic Justice Forum (EJF)</div>
+        <div style="font-size:12px;opacity:0.9">People's Platform for Economic, Climate, Social & Digital Justice</div>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="pillars.html">Pillars</a>
+      <a href="programs.html">Programs</a>
+      <a href="research.html">Research</a>
+      <a href="events.html">Events</a>
+      <a href="donate.html" class="btn btn-gold">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-label="Hero">
+  <img src="hero.jpeg" alt="Community banner">
+  <div class="overlay">
+    <div class="hero-inner container">
+      <h1>Equity. Justice. Prosperity.</h1>
+      <p class="lead">People's Platform for Economic, Climate, Social & Digital Justice</p>
+      <div class="cta-row">
+        <a href="about.html" class="btn btn-primary">Learn More</a>
+        <a href="donate.html" class="btn btn-secondary">Join Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <section class="card">
+    <h2>About Us</h2>
+    <p>The Economic Justice Forum (EJF) is the people's platform for Economic, Climate, Social, and Digital Justice. We champion equitable development, participatory governance, and sustainable prosperity for all.</p>
+    <p>EJF bridges grassroots realities and international advocacy, empowering citizens to claim their economic, environmental, and digital rights.</p>
+    <a href="about.html" class="btn btn-primary">Read Our Full Story</a>
+  </section>
+  
+  <section class="card">
+    <h2>Our Core Values</h2>
+    <div class="values-grid">
+      <div class="value-item">Equity & Social Justice</div>
+      <div class="value-item">Transparency & Integrity</div>
+      <div class="value-item">Inclusion</div>
+      <div class="value-item">Sustainability</div>
+      <div class="value-item">Collaboration</div>
+      <div class="value-item">Digital Fairness</div>
+    </div>
+  </section>
+  
+  <section class="card three-col">
+    <h2>Featured Projects</h2>
+    <div class="cols">
+      <div class="col">
+        <h3>Our Trees, Our Future</h3>
+        <p>Growing Leaders, Growing Trees — a flagship initiative linking environmental conservation, youth leadership and civic empowerment.</p>
+        <a href="programs.html#trees" class="btn btn-primary" style="margin-top:15px;">Read more</a>
+      </div>
+      <div class="col">
+        <h3>Civic Engagement on Economic & Climate Justice</h3>
+        <p>Empowering citizens to influence policy, monitor public spending, and demand accountability in natural resource management and climate finance.</p>
+        <a href="programs.html#civic" class="btn btn-primary" style="margin-top:15px;">Read more</a>
+      </div>
+      <div class="col">
+        <h3>Research & Policy Advocacy</h3>
+        <p>Developing evidence-based policy recommendations for equitable resource distribution and benefit-sharing frameworks.</p>
+        <a href="research.html" class="btn btn-primary" style="margin-top:15px;">Explore Research</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="card">
+    <h2>Our Impact</h2>
+    <div class="stats-grid">
+      <div><div class="counter">20,000</div><div>Trees grown</div></div>
+      <div><div class="counter">20,000</div><div>Tree Champions inducted</div></div>
+      <div><div class="counter">100,000</div><div>People reached through civic engagement</div></div>
+    </div>
+  </section>
+  
+  <section class="card">
+    <h2>Geographic Focus</h2>
+    <p>EJF operates across coastal counties (Taita Taveta, Kilifi, Kwale, Lamu, Mombasa), arid and semi-arid regions (Turkana, Isiolo, Samburu), resource-rich counties (Kajiado, Laikipia, Nyandarua), and urban hubs (Nairobi and Mombasa).</p>
+    <div class="impact-highlights">
+      <div class="impact-item">
+        <div class="impact-icon">🌊</div>
+        <h3>Coastal Regions</h3>
+        <p>Focus on marine resources and coastal community rights</p>
+      </div>
+      <div class="impact-item">
+        <div class="impact-icon">🌵</div>
+        <h3>Arid & Semi-Arid</h3>
+        <p>Climate resilience and resource management</p>
+      </div>
+      <div class="impact-item">
+        <div class="impact-icon">🏙️</div>
+        <h3>Urban Centers</h3>
+        <p>Digital inclusion and economic opportunities</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Registration Section -->
+  <section class="card" id="ai-registration">
+    <h2>Join EJF - AI Assisted Registration</h2>
+    <p>Our AI assistant can help you register as a member, volunteer, or partner. Get instant answers to your questions about EJF and complete your registration smoothly.</p>
+    
+    <div class="ai-registration-container">
+      <div class="ai-chat-interface">
+        <div id="chat-messages" class="chat-messages">
+          <div class="message bot-message">
+            <div class="message-avatar">🤖</div>
+            <div class="message-content">
+              <strong>EJF Assistant:</strong> Hello! I'm here to help you learn about EJF and guide you through registration. What would you like to know or how can I assist you today?
+            </div>
+          </div>
+        </div>
+        
+        <div class="chat-input-container">
+          <input type="text" id="user-input" placeholder="Ask about EJF or type 'register' to become a member..." class="chat-input">
+          <button id="send-btn" class="btn btn-primary">Send</button>
+        </div>
+        
+        <div class="quick-actions">
+          <button class="quick-btn" data-question="What is EJF?">What is EJF?</button>
+          <button class="quick-btn" data-question="How to become a member?">Become a Member</button>
+          <button class="quick-btn" data-question="What are the benefits?">Membership Benefits</button>
+          <button class="quick-btn" data-question="volunteer opportunities">Volunteer Opportunities</button>
+        </div>
+      </div>
+      
+      <div class="registration-form-container" id="registration-form" style="display: none;">
+        <h3>Member Registration Form</h3>
+        <form id="member-form">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" id="full-name" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" id="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="phone">
+          </div>
+          
+          <div class="form-group">
+            <label>County/Region *</label>
+            <select id="county" required>
+              <option value="">Select your county</option>
+              <option value="Taita Taveta">Taita Taveta</option>
+              <option value="Kilifi">Kilifi</option>
+              <option value="Kwale">Kwale</option>
+              <option value="Lamu">Lamu</option>
+              <option value="Mombasa">Mombasa</option>
+              <option value="Nairobi">Nairobi</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Interest Area *</label>
+            <select id="interest" required>
+              <option value="">Select your interest</option>
+              <option value="Economic Justice">Economic Justice</option>
+              <option value="Climate Justice">Climate Justice</option>
+              <option value="Social Justice">Social Justice</option>
+              <option value="Digital Justice">Digital Justice</option>
+              <option value="All Areas">All Areas</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>How would you like to contribute? *</label>
+            <select id="contribution" required>
+              <option value="">Select contribution type</option>
+              <option value="Member">General Member</option>
+              <option value="Volunteer">Volunteer</option>
+              <option value="Partner">Organization Partner</option>
+              <option value="Donor">Donor/Supporter</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Message (Optional)</label>
+            <textarea id="message" rows="3" placeholder="Tell us about your background or interests..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit Registration</button>
+          <button type="button" id="cancel-registration" class="btn btn-secondary">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-about">
+      <img src="logo.jpeg" alt="EJF logo" class="logo-sm" />
+      <p><strong>Economic Justice Forum (EJF)</strong><br/>Equity. Justice. Prosperity.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Explore</h4>
+      <a href="about.html">About</a><br/>
+      <a href="pillars.html">Pillars</a><br/>
+      <a href="programs.html">Programs</a><br/>
+      <a href="research.html">Research</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Subscribe</h4>
+      <form id="newsletter" action="#" method="post">
+        <input type="email" placeholder="Email address" required/>
+        <button class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <p>&copy; Economic Justice Forum (EJF) — Building a Future of Justice, Equity, and Prosperity</p>
+  </div>
+</footer>
+
+<!-- AI Chat Widget (Floating) -->
+<div id="ai-chat-widget" class="ai-chat-widget">
+  <div id="chat-window" class="chat-window" style="display: none;">
+    <div class="chat-header">
+      <h4>EJF Assistant</h4>
+      <button id="close-chat" class="close-btn">×</button>
+    </div>
+    <div id="widget-messages" class="chat-messages">
+      <div class="message bot-message">
+        <div class="message-avatar">🤖</div>
+        <div class="message-content">
+          <strong>EJF Assistant:</strong> Hi! I can answer questions about EJF and help with registration. How can I assist you?
+        </div>
+      </div>
+    </div>
+    <div class="chat-input-container">
+      <input type="text" id="widget-input" placeholder="Type your question..." class="chat-input">
+      <button id="widget-send" class="btn btn-primary">Send</button>
+    </div>
+  </div>
+  <button id="chat-toggle" class="chat-toggle-btn">
+    <span>🤖</span>
+    <span class="chat-label">EJF Assistant</span>
+  </button>
+</div>
+
+<!-- Add this JavaScript for AI functionality -->
+<script>
+// AI Knowledge Base about EJF
+const ejfKnowledgeBase = {
+  "what is ejf": "The Economic Justice Forum (EJF) is the people's platform for Economic, Climate, Social, and Digital Justice. We champion equitable development, participatory governance, and sustainable prosperity for all.",
+  "mission": "Our mission is to promote economic, social, climate, and digital justice through policy advocacy, constitutional reforms, civic empowerment, and sustainable development.",
+  "vision": "Our vision is a just, equitable, sustainable, and digitally inclusive Kenya where every person enjoys dignity, opportunity, and prosperity.",
+  "founder": "EJF was founded by Hon. Christopher Mwambingu along with co-founders Hon. Amriya Juma Boy, Mr. Moses Macharia, Reverend Isaac Mwambingu, and Mr. Hassan Maghanga.",
+  "programs": "Our main programs include: 1) Our Trees, Our Future - environmental conservation and youth leadership, 2) Civic Engagement on Economic & Climate Justice, 3) Research and Policy Advocacy.",
+  "membership benefits": "As an EJF member, you get: Access to training programs, Networking opportunities, Participation in advocacy campaigns, Updates on research and policy, Volunteer opportunities, and A platform to contribute to social change.",
+  "volunteer opportunities": "We offer volunteering in: Community mobilization, Research assistance, Event organization, Digital skills training, Tree planting initiatives, and Civic education programs.",
+  "donate": "You can support EJF through: One-time donations, Monthly contributions, Corporate partnerships, or In-kind support. Visit our donate page for more details.",
+  "contact": "You can reach us through the contact form on our website or start a registration process to become more involved.",
+  "location": "EJF operates across coastal counties (Taita Taveta, Kilifi, Kwale, Lamu, Mombasa), arid regions, resource-rich counties, and urban hubs.",
+  "impact": "We've planted 20,000 trees, trained 20,000 Tree Champions, and reached 100,000+ people through civic engagement."
+};
+
+// AI Response System
+class EJFAssistant {
+  constructor() {
+    this.registrationStep = 0;
+    this.userData = {};
+    this.setupEventListeners();
+  }
+
+  setupEventListeners() {
+    // Main chat interface
+    document.getElementById('send-btn').addEventListener('click', () => this.handleUserInput());
+    document.getElementById('user-input').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') this.handleUserInput();
+    });
+
+    // Widget chat interface
+    document.getElementById('widget-send').addEventListener('click', () => this.handleWidgetInput());
+    document.getElementById('widget-input').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') this.handleWidgetInput();
+    });
+
+    // Quick action buttons
+    document.querySelectorAll('.quick-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const question = e.target.getAttribute('data-question');
+        this.processQuestion(question, 'user-input');
+      });
+    });
+
+    // Chat toggle
+    document.getElementById('chat-toggle').addEventListener('click', () => this.toggleChatWidget());
+
+    // Registration form
+    document.getElementById('member-form').addEventListener('submit', (e) => this.handleRegistration(e));
+    document.getElementById('cancel-registration').addEventListener('click', () => this.cancelRegistration());
+
+    // Close chat
+    document.getElementById('close-chat').addEventListener('click', () => this.toggleChatWidget());
+  }
+
+  handleUserInput() {
+    const input = document.getElementById('user-input');
+    const question = input.value.trim();
+    if (question) {
+      this.processQuestion(question, 'user-input');
+      input.value = '';
+    }
+  }
+
+  handleWidgetInput() {
+    const input = document.getElementById('widget-input');
+    const question = input.value.trim();
+    if (question) {
+      this.processQuestion(question, 'widget-input');
+      input.value = '';
+    }
+  }
+
+  processQuestion(question, inputType) {
+    this.addMessage(question, 'user', inputType);
+    
+    // Check if user wants to register
+    if (question.toLowerCase().includes('register') || question.toLowerCase().includes('become member') || question.toLowerCase().includes('join')) {
+      this.startRegistrationProcess(inputType);
+      return;
+    }
+
+    // Find matching response
+    const response = this.findResponse(question);
+    setTimeout(() => {
+      this.addMessage(response, 'bot', inputType);
+      
+      // Suggest registration if relevant
+      if (question.toLowerCase().includes('member') || question.toLowerCase().includes('join') || question.toLowerCase().includes('participate')) {
+        setTimeout(() => {
+          this.addMessage("Would you like me to help you register as a member? Just type 'register' or click the registration form.", 'bot', inputType);
+        }, 500);
+      }
+    }, 1000);
+  }
+
+  findResponse(question) {
+    const lowerQuestion = question.toLowerCase();
+    
+    // Check for exact matches in knowledge base
+    for (const [key, value] of Object.entries(ejfKnowledgeBase)) {
+      if (lowerQuestion.includes(key)) {
+        return value;
+      }
+    }
+
+    // Check for related terms
+    if (lowerQuestion.includes('tree') || lowerQuestion.includes('plant') || lowerQuestion.includes('environment')) {
+      return ejfKnowledgeBase.programs;
+    } else if (lowerQuestion.includes('money') || lowerQuestion.includes('fund') || lowerQuestion.includes('support')) {
+      return ejfKnowledgeBase.donate;
+    } else if (lowerQuestion.includes('help') || lowerQuestion.includes('volunteer') || lowerQuestion.includes('participate')) {
+      return ejfKnowledgeBase.volunteer opportunities;
+    } else if (lowerQuestion.includes('where') || lowerQuestion.includes('location') || lowerQuestion.includes('area')) {
+      return ejfKnowledgeBase.location;
+    }
+
+    // Default response
+    return "I'm here to help you learn about EJF! You can ask me about our mission, programs, membership, volunteering, or how to support our work. If you'd like to register as a member, just type 'register'.";
+  }
+
+  startRegistrationProcess(inputType) {
+    this.addMessage("Great! I'd be happy to help you register. Let me show you the registration form where you can provide your details.", 'bot', inputType);
+    
+    setTimeout(() => {
+      document.getElementById('registration-form').style.display = 'block';
+      document.getElementById('ai-registration').scrollIntoView({ behavior: 'smooth' });
+    }, 1000);
+  }
+
+  cancelRegistration() {
+    document.getElementById('registration-form').style.display = 'none';
+    this.addMessage("Registration cancelled. If you change your mind, just type 'register' anytime!", 'bot', 'user-input');
+  }
+
+  async handleRegistration(e) {
+    e.preventDefault();
+    
+    const formData = {
+      name: document.getElementById('full-name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      county: document.getElementById('county').value,
+      interest: document.getElementById('interest').value,
+      contribution: document.getElementById('contribution').value,
+      message: document.getElementById('message').value,
+      timestamp: new Date().toISOString()
+    };
+
+    // Store in localStorage (in real implementation, this would go to a server)
+    let registrations = JSON.parse(localStorage.getItem('ejfRegistrations') || '[]');
+    registrations.push(formData);
+    localStorage.setItem('ejfRegistrations', JSON.stringify(registrations));
+
+    // Show success message
+    this.addMessage(`Thank you ${formData.name}! Your registration as a ${formData.contribution} has been received. We'll contact you at ${formData.email} soon. Welcome to EJF!`, 'bot', 'user-input');
+    
+    // Reset form
+    document.getElementById('member-form').reset();
+    document.getElementById('registration-form').style.display = 'none';
+
+    // Also show in widget if open
+    if (document.getElementById('chat-window').style.display !== 'none') {
+      this.addMessage(`Registration completed for ${formData.name} as ${formData.contribution}. Welcome to EJF!`, 'bot', 'widget-input');
+    }
+  }
+
+  addMessage(text, sender, inputType) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `message ${sender}-message`;
+    
+    const avatar = sender === 'bot' ? '🤖' : '👤';
+    messageDiv.innerHTML = `
+      <div class="message-avatar">${avatar}</div>
+      <div class="message-content">
+        <strong>${sender === 'bot' ? 'EJF Assistant' : 'You'}:</strong> ${text}
+      </div>
+    `;
+
+    const messagesContainer = inputType === 'user-input' ? 
+      document.getElementById('chat-messages') : 
+      document.getElementById('widget-messages');
+    
+    messagesContainer.appendChild(messageDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+
+  toggleChatWidget() {
+    const chatWindow = document.getElementById('chat-window');
+    const isVisible = chatWindow.style.display !== 'none';
+    chatWindow.style.display = isVisible ? 'none' : 'block';
+    
+    const toggleBtn = document.getElementById('chat-toggle');
+    if (!isVisible) {
+      toggleBtn.classList.add('active');
+    } else {
+      toggleBtn.classList.remove('active');
+    }
+  }
+}
+
+// Initialize the AI Assistant when page loads
+document.addEventListener('DOMContentLoaded', () => {
+  new EJFAssistant();
+});
+</script>
+
+<style>
+/* AI Chat Styles */
+.ai-registration-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.ai-chat-interface {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid #e9ecef;
+}
+
+.chat-messages {
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.message-avatar {
+  font-size: 1.5em;
+  flex-shrink: 0;
+}
+
+.message-content {
+  background: #f1f3f4;
+  padding: 12px 15px;
+  border-radius: 18px;
+  max-width: 80%;
+}
+
+.bot-message .message-content {
+  background: var(--navy);
+  color: white;
+}
+
+.user-message {
+  flex-direction: row-reverse;
+}
+
+.user-message .message-content {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.chat-input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #dee2e6;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quick-btn {
+  background: white;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.quick-btn:hover {
+  background: var(--navy);
+  color: white;
+}
+
+/* Floating Chat Widget */
+.ai-chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chat-window {
+  width: 350px;
+  height: 500px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.chat-header {
+  background: var(--navy);
+  color: white;
+  padding: 15px;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h4 {
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.chat-toggle-btn {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  border-radius: 50px;
+  padding: 15px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.chat-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.chat-toggle-btn.active {
+  background: var(--navy);
+  color: white;
+}
+
+.chat-label {
+  font-size: 14px;
+}
+
+/* Registration Form */
+.registration-form-container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid var(--gold);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.registration-form-container h3 {
+  color: var(--navy);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .ai-registration-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .chat-window {
+    width: 300px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ai-chat-widget {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .chat-window {
+    width: calc(100vw - 40px);
+    height: 400px;
+  }
+  
+  .chat-toggle-btn .chat-label {
+    display: none;
+  }
+}
+</style>
+
+</body>
+</html>
